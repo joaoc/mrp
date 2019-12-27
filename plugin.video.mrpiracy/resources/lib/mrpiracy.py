@@ -134,8 +134,10 @@ class mrpiracy:
 				
 				try:
 					if resultado['codigo'] == 204:
-						controlo.alerta('MrPiracy', resultado['mensagem'])
-						return False
+						if(('O addon est' in resultado['mensagem']) == False):
+							controlo.alerta('MrPiracy', resultado['mensagem'])
+							return False
+						pass
 				except:
 					pass
 				token = resultado['cookie']
