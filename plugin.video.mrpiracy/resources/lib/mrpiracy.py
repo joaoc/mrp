@@ -134,9 +134,10 @@ class mrpiracy:
 				
 				try:
 					if resultado['codigo'] == 204:
+						controlo.alerta('MrPiracy', resultado['mensagem']+'\n JC test')
 						if(('O addon est' in resultado['mensagem']) == False):
 							controlo.alerta('MrPiracy', resultado['mensagem'])
-							return False
+							//return False
 						pass
 				except:
 					pass
